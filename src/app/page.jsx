@@ -11,7 +11,7 @@ export default function Home() {
       
       {/* body */}
 
-      <div className="flex flex-col items-center mt-24">
+      <div className="flex flex-col items-center mt-40">
         <Image 
           width='300'
           height='100'
