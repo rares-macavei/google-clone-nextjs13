@@ -1,3 +1,4 @@
+import WebSearchResults from '@/components/WebSearchResults';
 import Link from 'next/link';
 import React from 'react'
 
@@ -14,7 +15,7 @@ export default async function WebSearchPage({searchParams}) {
   const results = data.items
 
   if(!results) {
-    return <div className='flex justify-center flex-col items-center pt-10'>
+    return <div className='flex justify-center flex-col items-center pt-10 '>
       <h1 className='text-3xl mb-4'>No result found</h1>
       <p className='text-lg'>Try searching something else or go back to the homepage.
       </p>
@@ -24,7 +25,7 @@ export default async function WebSearchPage({searchParams}) {
 
   return (
     <>
-      {results && results.map(result => <h1>{result.title}</h1>)}
+      {results && <WebSearchResults results={data} />}
     </>
   )
 }
