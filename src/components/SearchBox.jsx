@@ -27,7 +27,6 @@ export default function SearchBox() {
         className='w-full focus:outline-none' 
         value={term} 
         onChange={(e) => setTerm(e.target.value)} 
-        value={term} 
       />
       <RxCross2 className='text-2xl text-gray-500 cursor-pointer sm:mr-2 mr-[-20px]' onClick={() => setTerm("")}/> 
       <BsFillMicFill className='hidden sm:inline-flex text-4xl text-blue-500 pl-4 border-l-2 border-gray-300 mr-3' /> 
