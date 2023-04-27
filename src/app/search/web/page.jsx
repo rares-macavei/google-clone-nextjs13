@@ -3,8 +3,9 @@ import Link from 'next/link';
 import React from 'react'
 
 export default async function WebSearchPage({searchParams}) {
+  const startIndex = searchParams.start || "1";
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=AIzaSyAkbx_oKnwZ-jkmrtSUe8yencGTdlFva7U&cx=c138859fd3df342f4&q=${searchParams.searchTerm}`
+    `https://www.googleapis.com/customsearch/v1?key=AIzaSyAkbx_oKnwZ-jkmrtSUe8yencGTdlFva7U&cx=c138859fd3df342f4&q=${searchParams.searchTerm}&start=${startIndex}`
   )
 
   if(!response.ok) {

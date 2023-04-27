@@ -7,6 +7,13 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Google Clone NextJS',
   description: 'Google Clone created by Next JS 13',
+  icons: {
+    icon: {
+      url: "/favicon.svg",
+      type: "image/svg",
+    },
+    shortcut: { url: "/favicon.svg", type: "image/svg" },
+  },
 }
 
 export default function RootLayout({ children }) {
